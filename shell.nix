@@ -28,7 +28,8 @@ pkgs.mkShell {
     alias nl='npm run lint'
 
     alias create='npm create vite@latest .'
-    alias itail='npm i && npm i -D tailwind postcss autoprefixer @tailwindcss/forms && npx tailwindcss init -p && npm i vue-router@next vuex@latest && cp ../tailwind.config.js .'
+    alias installtail='npm install -D tailwindcss@latest postcss@latest autoprefixer@latest @tailwindcss/forms  && npx tailwindcss init -p'
+    alias installvue='npm i &&  npm i vue-router@next vuex@latest && cp ../tailwind.config.js .'
 
     alias l='ls -la'
     alias ll='ls -la'
