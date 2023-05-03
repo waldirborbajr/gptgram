@@ -1,10 +1,11 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
+import Header from "./components/Header.vue";
 </script>
 
 <template>
-  <div></div>
-  <HelloWorld msg="Vite + Vue" />
+  <Header />
+
+  <div class="container">container</div>
 </template>
 
 <style></style>
