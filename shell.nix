@@ -23,13 +23,13 @@ pkgs.mkShell {
   shellHook = ''
     export PATH="$PWD/node_modules/.bin/:$PATH"
     
-    alias nr='npm run dev'
-    alias ni='npm install'
-    alias nl='npm run lint'
-
     alias create='npm create vite@latest .'
     alias installtail='npm install -D tailwindcss@latest postcss@latest autoprefixer@latest @tailwindcss/forms  && npx tailwindcss init -p'
     alias installvue='npm i &&  npm i vue-router@next vuex@latest && cp ../tailwind.config.js .'
+
+    alias nr='npm run dev'
+    alias ni='npm install'
+    alias nl='npm run lint'
 
     alias l='ls -la'
     alias ll='ls -la'
