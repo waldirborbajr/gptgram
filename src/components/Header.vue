@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <header class="p-4 text-slate-400 bg-slate-700 text-center">
+  <header class="flex p-4 text-slate-400 bg-slate-700">
     <div class="flex items-center shadow-slate-400">
       <span class="text-slate-400 text-xl mr-1">
         <svg
@@ -20,9 +20,8 @@
         </svg>
       </span>
     </div>
-
-    <div class="text-2xl md:text-3xl font-bold mb-3">
+    <span class="center">
       <i class="fa-solid fa-microchip"></i> B+ Tech·​nol·​o·​gy
-    </div>
+    </span>
   </header>
 </template>
