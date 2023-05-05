@@ -22,7 +22,9 @@
         ><span class="text-slate-300">B+ Tech·​nol·​o·​gy</span>
       </a>
       <nav>
-        <a href="/" class="group base-menu"
+        <a
+          href="/"
+          class="transition duration-200 flex items-center py-3 space-x-2 hover: bg-slate-500 rounded-md hover:text-slate-700"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -121,30 +123,14 @@
 
 <style scoped>
 .base-menu {
-  @apply transition 
-    duration-200 
-    flex 
-    items-center 
-    py-3 
-    space-x-2 
-    hover:bg-slate-500 
-    rounded-md 
-    hover:text-slate-700;
+  transition duration-200 flex items-center py-3 space-x-2 hover: bg-slate-500 rounded-md hover:text-slate-700;
 }
 
 .base-text {
-  @apply text-slate-200 
-    group-hover:text-slate-700;
+  text-slate-200 group-hover: text-slate-700;
 }
 
 .side-bar {
-  @apply bg-slate-700 
-    text-slate-300 
-    w-64 
-    px-2 
-    space-y-6 
-    absolute 
-    inset-y-0 
-    left-0;
+  bg-slate-700 text-slate-300 w-64 px-2 space-y-6 absolute inset-y-0 left-0;
 }
 </style>

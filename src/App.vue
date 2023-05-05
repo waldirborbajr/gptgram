@@ -1,10 +1,9 @@
-<script setup>
-import Header from "./components/Header.vue";
-import SideBar from "./components/sidebar/SideBar.vue";
-</script>
+<script setup></script>
 
 <template>
-  <SideBar />
+  <div>
+    <RouterView />
+  </div>
 </template>
 
 <style></style>
