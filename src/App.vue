@@ -5,9 +5,6 @@ import SideBar from "./components/sidebar/SideBar.vue";
 
 <template>
   <SideBar />
-  <Header />
-
-  <div class="container">container</div>
 </template>
 
 <style></style>
