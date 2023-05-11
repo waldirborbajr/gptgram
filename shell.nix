@@ -1,37 +1,36 @@
-let 
-  pkgs = import <nixpkgs> {
-    config.allowUnfree = true;
-  };
+let pkgs = import <nixpkgs> { config.allowUnfree = true; };
 in
 pkgs.mkShell {
   buildInputs = with pkgs; [
-    nodejs-18_x
+    nodejs-19_x
     nodePackages.typescript-language-server
+    nodePackages_latest.pnpm
+    nodePackages_latest.vue-cli
     yarn
-    helix
     git
     zsh
+    curl
   ];
 
-    # avoid terminal issues
-    TERM="xterm";
+  # avoid terminal issues
+  TERM = "xterm";
 
-    # default locale
-    LANG="en_US.UTF-8";
-    LANGUAGE="en_US.UTF-8";
+  # default locale
+  LANG = "en_US.UTF-8";
+  LANGUAGE = "en_US.UTF-8";
 
   shellHook = ''
     export PATH="$PWD/node_modules/.bin/:$PATH"
     
-    alias createvite='npm create vite@latest .'
-    alias createvuetify='yarn create vuetify .'
-    alias installfont='yarn add @fortawesome/fontawesome-free'
-    alias installtail='yarn add -D tailwindcss@latest postcss@latest autoprefixer@latest @tailwindcss/forms  && npx tailwindcss init -p'
-    alias installvue='npm i &&  npm i vue-router@next vuex@latest && cp ../tailwind.config.js .'
+    alias createvite='pnpm create vite@latest .'
+    alias createvuetify='pnpm create vuetify .'
+    alias installfont='pnpm i @fortawesome/fontawesome-free'
+    alias installtail='pnpm i -D tailwindcss@latest postcss@latest autoprefixer@latest @tailwindcss/forms  && npx tailwindcss init -p'
+    alias installvue='pnpm i &&  pnpm i vue-router@next vuex@latest && cp ../tailwind.config.js .'
 
-    alias nr='npm run dev'
-    alias ni='npm install'
-    alias nl='npm run lint'
+    alias nr='pnpm run dev'
+    alias ni='pnpm install'
+    alias nl='pnpm run lint'
 
     alias l='ls -la'
     alias ll='ls -la'
@@ -40,18 +39,15 @@ pkgs.mkShell {
     alias yb='yarn build'
     alias yp='yarn preview'
 
-    echo "=> Installing VueJS in here"
-    npm cache clean -f
-    yarn global add @vue/cli
+    echo "=> Installing ViteJS in here"
+    pnpm i g vite@latest 
 
     echo ""
     echo "That's all folks."
     echo ""
     echo "To start a VueJS project type"
     echo ""
-    echo "yarn init vue@latest"
-    echo "or"
-    echo "npm create vite@latest ."
+    echo "pnpm create vite@latest ."
   '';
 }
 
